@@ -31,3 +31,5 @@ finalize:
     to: /rootfs/profiles
   - from: /pkg/turingrk1
     to: /rootfs/profiles
+  - from: /pkg/nanopc-t6-lts
+    to: /rootfs/profiles

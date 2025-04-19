@@ -15,4 +15,5 @@ use (
 	./installers/rock5a/src
 	./installers/rock5b/src
 	./installers/turingrk1/src
+	./installers/nanopc-t6-lts/src
 )

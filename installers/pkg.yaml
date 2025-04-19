@@ -17,6 +17,7 @@ dependencies:
   - stage: rock5a
   - stage: rock5b
   - stage: turingrk1
+  - stage: nanopc-t6-lts
   - stage: profiles
   - stage: u-boot-helios64
     platform: linux/arm64
@@ -47,6 +48,8 @@ dependencies:
   - stage: u-boot-rock5b
     platform: linux/arm64
   - stage: u-boot-turingrk1
+    platform: linux/arm64
+  - stage: u-boot-nanopc-t6-lts
     platform: linux/arm64
   - image: "{{ .BUILD_ARG_PKGS_PREFIX }}/kernel:{{ .BUILD_ARG_PKGS }}"
     platform: linux/arm64
@@ -108,6 +111,10 @@ dependencies:
     platform: linux/arm64
     from: /dtb/rockchip/rk3588-turing-rk1.dtb
     to: /rootfs/artifacts/arm64/dtb/rockchip/rk3588-turing-rk1.dtb
+  - image: "{{ .BUILD_ARG_PKGS_PREFIX }}/kernel:{{ .BUILD_ARG_PKGS }}"
+    platform: linux/arm64
+    from: /dtb/rockchip/rk3588-nanopc-t6-lts.dtb
+    to: /rootfs/artifacts/arm64/dtb/rockchip/rk3588-nanopc-t6-lts.dtb
 finalize:
   - from: /rootfs
     to: /
